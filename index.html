@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string method</title>
+</head>
+<body>
+    <script>
+        //Q1 merge two name
+        var name1=prompt("Enter first name")
+        var name2=prompt("Enter last name")
+        var name=name1.concat(" "+name2)
+        alert(name)
+        //Q2 length
+        var mobname=prompt("enter your favourite mobile name")
+        
+        alert("my favorite mobile is: "+mobname+"\n mobile name length is "+mobname.length)
+
+        //Q3 index of
+        var nati="pakistani"
+        var nati2 = nati.indexOf("n")
+        console.log(nati2)
+        //Q4 last index
+        var nati3="pakistani"
+        var nati4 = nati3.lastIndexOf("k")
+        console.log(nati4)
+        //Q5 repeat q4
+        var nati5="pakistani"
+        var nati6 = nati5.lastIndexOf("i")
+        console.log(nati6)
+        //Q6 q1 repeat in string
+        var name3="aliyan"
+        var name4="khan"
+        var name5=name3.concat(" "+name4)
+        console.log(name5)
+        //Q7 replace moethod
+        var city1="hyderabad"
+        var city2=city1.split("")
+        city2.splice(0,5,'i','s','l','a','m')
+        city3=city2.join("")
+        console.log(city3)
+        //Q8 replace 2
+        var message1="aliyan and aliya are good player in football and cricket"
+        var m1=message1.replace("and","&")
+        console.log(m1)
+        var message="aliyan and aliya are good player in football and cricket"
+        var m2=message.replace(/and/g,"&")
+        console.log(m2)
+        //Q9  string convert to num
+        var str="472"
+        console.log(str);
+        console.log(typeof str)
+        str2=parseInt(str)
+        console.log(str)
+        console.log(typeof str2)
+        //Q10 to uppercase
+        var anything=prompt("enter anything and conveert to upper case")
+        anything=anything.toLocaleUpperCase()
+        alert(anything)
+        //Q11 first word capital
+        var upper=prompt("enter anything convert first word is capital")
+        upper=upper.split(" ")
+        for(i=0;i<upper.length;i++){
+            upper[i]=upper[i][0].toLocaleUpperCase()+upper[i].slice(1).toLocaleLowerCase()
+        }
+        upper2=upper.join(" ")
+        alert(upper2)
+        console.log(typeof upper)
+        console.log(typeof upper2)
+        //Q12 num convert to string
+        var num1=45.67
+        console.log(num1)
+        num1=num1.toString()
+        num1=num1.split("")
+        num2=num1.slice(3,5)
+        num1=num1.splice(0,2,)
+        num3=num1.concat(num2)
+        num3=num3.join("")
+        console.log(num3)
+        //Q13 correct user name
+        let username = prompt("Enter your username:");
+
+// check if the username contains any special symbol
+if (username.includes('@') || username.includes('.') || username.includes(',') || username.includes('!')) {
+  alert("Please enter a valid username without any special symbols (@, ., ,, !)");
+} else {
+  alert("Your username is: " + username);
+}
+
+//Q14 bakery
+var arry1 = ['cake', 'apple pie', 'cookie', 'chips', 'patties']
+arr2=arry1.indexOf(prompt("enter your item anything in abc bakery").toLocaleLowerCase())
+if(arr2>=0&&arr2<=4){
+    alert(arry1[arr2]+"is available  index of "+arr2+ " in abc bakery")
+}
+else(alert("this is not available in index of "+arr2+" in abc bakery"))
+
+//Q15 password
+while (true) {
+  var password = prompt("Enter your password:");
+  if (password.length < 6) {
+    alert("Password should be at least 6 characters long.");
+  } else if (!isNaN(parseInt(password[0]))) {
+    alert("Password should not start with a number.");
+  } else if (!/[a-zA-Z]/.test(password) || !/\d/.test(password)) {
+    alert("Password should contain both alphabets and numbers.");
+  } else {
+    alert("Password accepted.");
+    break;
+  }
+}
+//Q16 string convert arry
+var univer="university of karachi".split('')
+for(var i =0;i<univer.length;i++){
+   console.log(univer[i])
+}
+//Q17 last alphabet
+let userInput = "Enter a string" 
+
+let lastChar = userInput[userInput.length - 1];  
+
+console.log("The last character is: " + lastChar);
+
+//Q18
+let string = "The quick brown fox jumps over the lazy dog";
+let count = (string.toLowerCase().match(/the/g) || []).length;   
+
+console.log(`The word 'the' appears ${count} times in the string`);
+
+
+
+
+
+
+
+        
+     
+        
+        
+
+
+
+    </script>
+</body>
+</html>
